@@ -1,0 +1,90 @@
+[
+    {
+        "name": "Health",
+        "description": "Health insurance covers your expense on treatment in a hospital. For this protection to be effective, you pay an amount known as the premium to the insurance company or insurer. The insurer offers a range of health insurance plans which caters to individuals with different medical insurance need. A broader categorisation of health insurance plans is given below.",
+        "title": "Health Insurance",
+        "label": "Health",
+        "businessType": "HEALTH",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/health",
+        "category": "Health",
+        "precedence": 3
+    },
+    {
+        "name": "Car",
+        "description": "A car insurance policy specifically targets and offers you financial protection in case of a road accident, involving your car. Primarily, based on coverage, there are two types of car insurance policies in India: a third-party insurance and a comprehensive car insurance. You can avail of both types of covers online.",
+        "title": "Car Insurance",
+        "label": "Car",
+        "businessType": "CAR",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/car",
+        "category": "Car",
+        "precedence": 2
+    },
+    {
+        "name": "Two Wheeler",
+        "description": "The biggest known fact about two wheelers is that they are more prone to road accidents than cars and other vehicles. Thus, having a valid bike insurance policy seems to be a sensible option in any case. There are two types of bike insurance available in India: Third Party and Comprehensive Insurance. Both these types of covers are available online, and you can opt for them with a few clicks",
+        "title": "Two Wheeler Insurance",
+        "label": "Two Wheeler",
+        "businessType": "BIKE",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com:8090/personal/bike",
+        "category": "Bike",
+        "precedence": 1
+    },
+    {
+        "name": "Life",
+        "description": "Term insurance is a life insurance cover which provides a death benefit for a fixed number of years; the fixed number of years being the ‘term’ in term insurance. Death benefit is when the nominee gets an amount equal to the sum assured or the coverage amount if the insured dies during that period. The sum assured, the term of the policy and the nominee who will get the benefit after the insured person’s death depends on what he or she chooses at the time of buying the term insurance plan.",
+        "title": "Life Insurance",
+        "label": "Life",
+        "businessType": "TERM",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/term",
+        "category": "Life",
+        "precedence": 4
+    },
+    {
+        "name": "Travel",
+        "description": "Planning on the places to visit and sights to see during your international tour? Take some time out to know about travel insurance policy too. The right travel insurance policy can save you from a number of likely problems during your trip. The primary purpose of a travel insurance policy is to offer medical cover to the insured during international travel. Along with this, it also provides complete protection against other travel related issues too.",
+        "title": "Travel Insurance",
+        "label": "Travel",
+        "businessType": "TRAVEL",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/travel",
+        "category": "Travel",
+        "precedence": 5
+    },
+    {
+        "name": "Super Top-up",
+        "description": "Get an additional health cover at a minimum price with a super top-up policy and secure your medical expenses for as long as you live.",
+        "title": "Super Top-up Insurance",
+        "label": "Super Top-up",
+        "businessType": "HEALTH",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/health/topup",
+        "category": "TOPUP",
+        "precedence": 6
+    },
+    {
+        "name": "Critical illness",
+        "description": "Fight life-threatening conditions without the additional stress of medical bills. Choose the right critical illness policy to cover yourself.",
+        "title": "Critical illness Insurance",
+        "label": "Critical illness",
+        "businessType": "HEALTH",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/health/ci",
+        "category": "CI",
+        "precedence": 7
+    },
+    {
+        "name": "Personal Accident",
+        "description": "Protect yourself from accident-related expenses with the right personal accident policy cover.",
+        "title": "Personal Accident Insurance",
+        "label": "Personal Accident",
+        "businessType": "HEALTH",
+        "imageURL": "",
+        "webviewURL": "http://sit.symboinsurance.com/product/health/pa",
+        "category": "PA",
+        "precedence": 0
+    }
+]

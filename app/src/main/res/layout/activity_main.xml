@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.MainActivity"
+        android:background="#E0F2F1">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_symbo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/symbo"
+            android:textSize="@dimen/_45sdp"
+            android:textColor="@color/colorAccent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_insurance"
+            android:layout_below="@+id/tv_symbo"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="@string/insurance_caps"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="@color/grey_900"/>
+
+
+    </RelativeLayout>
+
+</layout>

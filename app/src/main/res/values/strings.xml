@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Symbo Insurance</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="openDrawer">open_drawer</string>
+    <string name="closeDrawer">close_drawer</string>
+    <string name="insurance">Insurance</string>
+    <string name="insurance_caps">I N S U R A N C E</string>
+    <string name="loading_please_wait">Loading please wait</string>
+    <string name="no_internet">No Internet!</string>
+    <string name="no_internet_msg">Please connect to internet and try again.</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="nakul">Nakul Dwivedi</string>
+    <string name="insu_advisor">Insurance Advisor</string>
+    <string name="mobile">+91 12351 78900</string>
+    <string name="email">nakul.dwivedi@abcd.com</string>
+    <string name="hcbt">Health / Car / Bike / Travel</string>
+    <string name="share">Share Card</string>
+    <string name="search_insurance">Search Insurance</string>
+    <string name="view_insu">View Insurance</string>
+    <string name="card_details">Nakul Dwivedi, Insurance Advisor (Symbo Insurance India Pvt. Ltd).\n Mobile Number : +91 12351 78900\n Email id:nakul.dwivedi@abcd.com</string>
+    <string name="no_data">No data available!</string>
+    <string name="symbo">S Y M B O</string>
+    <string name="no_results">No results found!</string>
+
+</resources>

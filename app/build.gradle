@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion build_versions.target_sdk
+    buildToolsVersion build_versions.build_tools
+    defaultConfig {
+        applicationId "com.symbo.insurance"
+        versionCode 1      // Increment every time with App Release
+        minSdkVersion build_versions.min_sdk
+        targetSdkVersion build_versions.target_sdk
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    signingConfigs {
+        debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('../keystoreDebug/debug.keystore')
+            storePassword 'android'
+        }
+        release {
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+            storeFile file('../keystoreRelease/symboInsurance.jks')
+            storePassword KEYSTORE_PASSWORD
+        }
+    }
+
+    buildTypes {
+        debug {
+            versionNameSuffix "1.0.0"
+            debuggable true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            versionNameSuffix "1.0.0"
+            debuggable false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    configurations.all {
+        resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+            def requested = details.requested
+            if (requested.group == "androidx") {
+                if (!requested.name.startsWith("multidex")) {
+                    details.useVersion "${targetSdk}.+"
+                }
+            }
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def applicationName = "Symbo Insurance"
+            def buildType = variant.variantData.variantConfiguration.buildType.name
+            def fileName = applicationName + " APK " + assignNewBuildTypeName(buildType) + " v" + variant.versionName + ".apk"
+            outputFileName = fileName
+        }
+    }
+}
+
+def assignNewBuildTypeName(String buildType) {
+    def newBuildTypeName = ""
+    if (buildType == "debug") {
+        newBuildTypeName = "UAT"
+    } else if (buildType == "release") {
+        newBuildTypeName = "LIVE"
+    }
+    return newBuildTypeName
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Espresso UI Testing
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.espresso.contrib
+    androidTestImplementation deps.espresso.intents
+
+    // Architecture components
+    implementation deps.lifecycle.runtime
+    implementation deps.lifecycle.extensions
+    annotationProcessor deps.lifecycle.compiler
+    implementation deps.room.runtime
+    annotationProcessor deps.room.compiler
+    implementation deps.support.app_compat
+    implementation deps.support.recyclerview
+    implementation deps.support.cardview
+    implementation deps.constraint_layout
+    implementation deps.support.design
+    implementation deps.work.playServices
+
+    // Third Party Libraries
+    implementation deps.thirdParty.gson
+    implementation deps.thirdParty.sdp
+    implementation deps.thirdParty.glideRuntime
+    annotationProcessor deps.thirdParty.glideCompiler
+    implementation deps.thirdParty.lottieFiles
+}
